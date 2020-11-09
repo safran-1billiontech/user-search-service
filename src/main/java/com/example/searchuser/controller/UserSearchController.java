@@ -2,7 +2,7 @@ package com.example.searchuser.controller;
 
 import com.example.searchuser.model.User;
 import com.example.searchuser.service.UserSearchService;
-import com.netflix.discovery.converters.Auto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +13,7 @@ import java.util.Optional;
 @RestController
 public class UserSearchController {
 
-    @Auto
+    @Autowired
     UserSearchService userSearchService;
 
     @GetMapping("/findAllUser")
